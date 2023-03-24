@@ -39,7 +39,7 @@ const App = () => {
                 <Route exact path='/account/products' element={<AdminProducts />} />
                 <Route exact path='/payment' element={<Payment />} />
                 <Route exact path='/orders' element={<Orders />} />
-                <Route exact path='/checkout-success?payment_success' element={<CheckOutSuccess />} />
+                <Route exact path='/checkout-success' element={<CheckOutSuccess />} />
                 <Route  path='*' element={<NotFound/>} />
               </Route>
             </Routes>
