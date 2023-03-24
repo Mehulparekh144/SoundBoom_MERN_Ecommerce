@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+    @apply font-primary py-52 md:py-24
+}
+
+input,textarea,select,option{
+    @apply rounded-xl bg-gray-200 px-4 py-2 focus:outline-primary 
+}
+
+button{
+    @apply bg-secondary text-white rounded-xl py-2 px-4 transition-all ease-in-out
+}
+
+table , th,td{
+    @apply border-2 px-2 py-3 border-primary 
+}
+
+button:hover{
+    @apply scale-105 text-white
+}
+
+button:disabled{
+    @apply bg-secondary bg-opacity-50 cursor-not-allowed
+}
