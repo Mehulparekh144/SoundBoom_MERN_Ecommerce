@@ -248,8 +248,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
         ],
         line_items,
         mode: "payment",
-        success_url: `${process.env.BASE_URL}/checkout-success?payment_status=success`,
-        cancel_url: `${process.env.BASE_URL}/payment`,
+        success_url: `${req.headers.origin}/checkout-success?payment_status=success`,
+        cancel_url: `${req.headers.origin}/payment`,
     });
 
 
