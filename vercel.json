@@ -6,8 +6,10 @@
         {
             "source" : "/api/(.*)",
             "destination" : "/api/index.js"
+        },
+        {
+            "source" : "/(.*)",
+            "destination": "client/index.html"
         }
-    ],
-    "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
-
+    ]
 }
