@@ -26,8 +26,8 @@ app.use(cookieParser());
 const bcryptSalt = bcrypt.genSaltSync(10);
 
 //Connections
-app.listen(process.env.PORT, () => {
-    console.log("Server running on http://localhost:" + process.env.PORT);
+app.listen(4000, () => {
+    console.log("Server running on http://localhost:" + 4000);
 });
 mongoose.connect(process.env.MONGO_URL);
 
