@@ -34,7 +34,7 @@ const UpdateModal = ({ open, setOpen , product}) => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: "10vh" }}
                     transition={{ type: 'spring', bounce: 0.3 }}
-                    className="bg-primary text-white md:h-max rounded-md inset-0 absolute px-4 md:px-32 py-4 md:overflow-y-visible overflow-y-scroll z-[100]"
+                    className="bg-primary text-white md:h-max rounded-md  px-4 md:px-32 py-4 md:overflow-y-visible overflow-y-scroll z-[100]"
                 >
                     <div className='flex justify-between my-3 text-3xl'>
                         <h1>Update Product</h1>

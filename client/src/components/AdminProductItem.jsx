@@ -29,8 +29,6 @@ const AdminProductItem = ({ product }) => {
 
 
     return (
-        <>
-        <UpdateModal open={open} setOpen={setOpen} product={product} />
         <div className='bg-primary bg-opacity-10 w-full md:flex  my-4 rounded-lg border-2 border-opacity-10 border-primary hover:shadow-[5px_5px_#002B5B] hover:scale-105 hover:border-2 hover:border-opacity-100 transition-all  ease-linear'>
 
             <div className='relative md:w-1/4  border-2 border-primary border-opacity-5'>
@@ -46,12 +44,14 @@ const AdminProductItem = ({ product }) => {
                     <button className='flex gap-1 items-center' onClick={()=>deleteProductHandler(_id)}><AiFillDelete />Delete</button>
                     <button className='flex gap-1 items-center ' onClick={toggleModal}><RxUpdate/> Update</button>
                 </div>
+        <UpdateModal open={open} setOpen={setOpen} product={product} />
             </div>
 
 
 
+
         </div>
-        </>
+
     )
 }
 

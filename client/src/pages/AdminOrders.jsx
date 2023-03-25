@@ -16,6 +16,13 @@ const AdminOrders = () => {
     const [loading, setLoading] = useState(true)
 
 
+    function convertDateString(dateString) {
+        const dateObj = new Date(dateString);
+        const options = { month: 'long', day: 'numeric', year: '2-digit' };
+        const convertedDate = dateObj.toLocaleDateString('en-US', options);
+        return convertedDate;
+    }
+
     useEffect(() => {
         axios.get("/users").then((response) => {
             setUserData(response.data)
@@ -72,13 +79,8 @@ const AdminOrders = () => {
                                         <div className=' flex flex-col gap-2 p-4'>
 
                                             {item.cart && item.cart.map((cartItem, key) => (
-                                                <div key={key} className="p-4 bg-gray-200 bg-opacity-10  rounded-xl text-sm flex items-center justify-between">
-                                                    ₹{cartItem.price}
-                                                    {cartItem.cart.map((individual_item, key) => (
-                                                        <div key={key}>
-                                                            {individual_item.name}
-                                                        </div>
-                                                    ))}
+                                                <div key={key} className="px-4 py-1 bg-gray-200 bg-opacity-10  rounded-xl text-sm flex items-center justify-between">
+                                                    ₹{cartItem.price} - {item.cart.length} Products - {convertDateString(cartItem.time)}
                                                 </div>
                                             ))}
                                         </div>
