@@ -81,13 +81,13 @@ const ProductList = () => {
         if (selectedPrice !== 'all') {
             const productPrice = parseInt(product.price)
             
-            if (selectedPrice === '<1000k' && productPrice>= 1000) {
+            if (selectedPrice === '<₹1000' && productPrice>= 1000) {
                 return false
             }
-            else if (selectedPrice === '>3000k' && productPrice <= 3000) {
+            else if (selectedPrice === '>₹3000' && productPrice <= 3000) {
                 return false
             }
-            else if (selectedPrice === '1000k-3000k' && (productPrice < 1000 || productPrice > 3000)) {
+            else if (selectedPrice === '₹1000-₹3000' && (productPrice < 1000 || productPrice > 3000)) {
                 return false
             }
         }
@@ -105,7 +105,7 @@ const ProductList = () => {
         <div>
             <div className='my-5 flex gap-6'>
                 <DropDown title='All' items={['All', 'Wired', 'Wireless']} onSelect={handleTypeChange} />
-                <DropDown title='All' items={['All', '<1000K', '1000K-3000K' , '>3000K']} onSelect={handlePriceChange} />
+                <DropDown title='All' items={['All', '<₹1000', '₹1000-₹3000' , '>₹3000']} onSelect={handlePriceChange} />
             </div>
             <div className='mt-7'>
                 <h1 className='text-3xl font-semibold text-primary'>Our Products</h1>
