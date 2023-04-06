@@ -65,7 +65,7 @@ const Navbar = () => {
                 <img src={logo} alt="" className='w-[50px] h-[50px] motion-safe:animate-bounce' />
                 <h1 className='text-3xl text-primary font-bold'>SoundBoom</h1>
             </Link>
-            <div className='w-full md:w-1/2'>
+            <div className='relative w-full md:w-1/2'>
                 <input type="text" placeholder='Search Products' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} ref={searchInputRef} onFocus={(e) => handleSearchDropDown(e)} className='w-full' />
                 <SearchResults isOpen={isSearchOpen} filteredProducts={filteredProducts} />
             </div>

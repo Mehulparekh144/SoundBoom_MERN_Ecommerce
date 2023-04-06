@@ -19,7 +19,7 @@ const FilterProductItem = ({ product }) => {
 
     return (
 
-        <div className='bg-primary flex bg-opacity-10 w-full my-4 rounded-lg border-2 border-opacity-10 border-primary hover:shadow-[5px_5px_#002B5B] hover:scale-105 hover:border-2 hover:border-opacity-100 transition-all   ease-linear'>
+        <div className='bg-primary md:flex bg-opacity-10  w-full my-4 rounded-lg border-2 border-opacity-10 border-primary hover:shadow-[5px_5px_#002B5B] hover:scale-105 hover:border-2 hover:border-opacity-100 transition-all   ease-linear'>
             <div className='relative   border-2 border-primary border-opacity-5'>
                 <div className='flex justify-center'>
                     <img src={image} alt="" className='w-60 h-60 ' />
